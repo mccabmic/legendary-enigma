@@ -1,5 +1,9 @@
 #include "Person.hpp"
 
-Person::Person()
-{
+int Person::getAge(){
+	return age;
+}
+
+string Person::getName() {
+	return name;
 }

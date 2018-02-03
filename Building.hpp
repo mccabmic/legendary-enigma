@@ -1,8 +1,11 @@
 #ifndef BUILDING_HPP
 #define BUILDING_HPP
 #include <string>
+#include <iostream>
 
 using std::string;
+using std::cout;
+using std::endl;
 
 class Building{
 
@@ -12,17 +15,16 @@ private:
 	string address;
 
 public:
-	Building();
-	Building(string buildingName, string buildingAddress, int buildingSize);
-
-	
+	Building(string buildingName, string buildingAddress, int area)
+		: name(buildingName), address(buildingAddress), buildingSize(area) {};
+		
 	void setName(string newName);
-	void setAddress(string newAddress);
-	void setSize(int newArea);
 	
 	int getSize();
 	string getName();
 	string getAddress();
+
+	void printDetails();
 };
 
 

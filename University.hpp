@@ -2,7 +2,9 @@
 #define UNIVERSITY_HPP
 
 
-#include "Person.hpp" // Person, Student, Instructor
+#include "Person.hpp"
+#include "Instructor.hpp"
+#include "Student.hpp"
 #include "Building.hpp" // building
 #include <vector>
 
@@ -12,18 +14,18 @@ using std::vector;
 class University {
 
 private:
-	string schoolName = "Oregon State Unviersity";
+	const string schoolName = "Oregon State Unviersity";
 
-	vector<Building> chicken;
-	vector<Person> everyone;
+	vector<Building*> campus;
+	vector<Person*> campusPeople;
 
 public:
-	University();
-	~University();
 
-	void addBuilding();
+	void addBuilding(string buildingName, string buildingAddress, int size);
+	void addStudent();
+	void addInstructor();
 
-
+	void employPerson(Person* ptrPerson);
 };
 
 #endif // !UNIVERSITY_HPP
